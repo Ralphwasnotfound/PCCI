@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="!scroll-smooth">
+  {% load static tailwind_tags %}
+  {% load static %}
+  {% load compress static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        Philippine Countryville College Inc.
+      {% endblock %}
+    </title>
+
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'src/css/style.css' %}" />
+    {% endcompress %}
+
+    <link rel="icon" href="{% static 'img/PCC.png' %}" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.css" rel="stylesheet" />
+    {% tailwind_css %}
+  </head>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,125,100..900;1,125,100..900&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .custom-outline {
+      text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    }
+    
+    .dancing {
+      font-family: 'Dancing Script', serif;
+    }
+    
+    @media (max-width: 640px) and (max-height: 480px) {
+      .mediafont {
+        font-size: 40px;
+      }
+    }
+    
+    @media (max-width: 320px) and (max-height: 480px) {
+      .fontmedia {
+        font-size: 20px;
+      }
+    }
+    
+    .archivo {
+      font-family: 'Archivo', serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+      font-variation-settings: 'wdth' 100;
+    }
+    
+    .playfair {
+      font-family: 'Playfair Display', serif;
+      font-optical-sizing: auto;
+      font-weight: 900;
+      font-style: italic;
+    }
+    
+    .roboto {
+      font-family: 'Roboto', serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-variation-settings: 'wdth' 75;
+    }
+  </style>
+
+  <body>
+    {% comment %}NAVIGATION{% endcomment %}
+    <div class="bg-[#2612d9] py-[1px] w-[100%]">
+      <div>
+        <ul class="flex items-center justify-end gap-10 px-5 text-[#ffffff]">
+          <li>
+            <a href="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="rgba(255,255,255,1)">
+                <path d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 16.9913 5.65783 21.1283 10.4385 21.8785V14.8906H7.89941V12H10.4385V9.79688C10.4385 7.29063 11.9314 5.90625 14.2156 5.90625C15.3097 5.90625 16.4541 6.10156 16.4541 6.10156V8.5625H15.1931C13.9509 8.5625 13.5635 9.33334 13.5635 10.1242V12H16.3369L15.8936 14.8906H13.5635V21.8785C18.3441 21.1283 22.001 16.9913 22.001 12C22.001 6.47715 17.5238 2 12.001 2Z"></path>
+              </svg>
+            </a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <a href="" class="flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="rgba(255,255,255,1)">
+                <path d="M14 14.252V22H4C4 17.5817 7.58172 14 12 14C12.6906 14 13.3608 14.0875 14 14.252ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM18 17V14H20V17H23V19H20V22H18V19H15V17H18Z"></path>
+              </svg>
+              <div class="text-[12px]">ADMISSION</div>
+            </a>
+          </li>
+          <li class="flex items-center space-x-2">
+            <a href="" class="flex items-center space-x-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="rgba(255,255,255,1)">
+                <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"></path>
+              </svg>
+              <div class="text-[12px]">LOGIN</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="yellow py-[1px] w-[100%]"></div>
+
+    <nav class="bg-[#0033ff]">
+      {% comment %}desktop icon{% endcomment %}
+      <a href="#" class="hidden md:block absolute left-[200px] top-1 items-center space-x-3 rtl:space-x-reverse z-50"><img src="{% static 'img/PCC.png' %}" class="h-28 drop-shadow-white" alt="PCC" /></a>
+      {% comment %}smallscreen icon{% endcomment %}
+      <a href="#" class="block md:hidden absolute left-[20px] items-center space-x-3 rtl:space-x-reverse z-50"><img src="{% static 'img/PCCI.png' %}" class="h-20 drop-shadow-white" alt="PCC" /></a>
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">
+        <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center md:hidden z-50" aria-controls="navbar-dropdown" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+
+        {% comment %}HOME{% endcomment %}
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul class="flex flex-col md:items-center font-medium p-4 md:p-0 mt-4 rounded-lg bg-blue-500 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-[#0033ff]">
+            <li>
+              <a href="#" class="block text-white md:bg-[#0033ff]" aria-current="page">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="rgba(255,255,255,1)">
+                  <path d="M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20Z"></path>
+                </svg>
+              </a>
+            </li>
+
+            <li class="pt-1 md:pt-0">
+              <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white md:bg-[#0033ff] font-medium text-sm text-center inline-flex items-center" type="button">
+                ACADEMICS<svg class="w-2 h-2 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div id="dropdownDelay" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="pt-1 md:pt-0">
+              <button id="dropdownDelayButton1" data-dropdown-toggle="dropdownDelay1" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white md:bg-[#0033ff] font-medium text-sm text-center inline-flex items-center" type="button">
+                STUDENT HUB<svg class="w-2 h-2 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="dropdownDelay1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="pt-1 md:pt-0">
+              <button id="dropdownDelayButton2" data-dropdown-toggle="dropdownDelay2" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white md:bg-[#0033ff] font-medium text-sm text-center inline-flex items-center" type="button">
+                ABOUT<svg class="w-2 h-2 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                </svg>
+              </button>
+              <div id="dropdownDelay2" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDelayButton">
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                  </li>
+                  <li>
+                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <div class="md:hidden flex items-center flex-row justify-end gap-5 ml-auto">
+              <!-- Added ml-auto here -->
+              <div class="max-w-sm p-2 bg-[#0033ff] border border-[#fdd708] rounded-full shadow transform transition duration-300 ease-in-out hover:scale-95">
+                <div class="flex items-center flex-row justify-between">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="rgba(255,255,255,1)">
+                      <path d="M12 22C6.47715 22 2 17.5228 2 12 2 6.47715 6.47715 2 12 2 17.5228 2 22 6.47715 22 12 22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12 20 7.58172 16.4183 4 12 4 7.58172 4 4 7.58172 4 12 4 16.4183 7.58172 20 12 20ZM13 10.5V15H14V17H10V15H11V12.5H10V10.5H13ZM13.5 8C13.5 8.82843 12.8284 9.5 12 9.5 11.1716 9.5 10.5 8.82843 10.5 8 10.5 7.17157 11.1716 6.5 12 6.5 12.8284 6.5 13.5 7.17157 13.5 8Z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="max-w-sm p-2 bg-[#0033ff] border border-[#fdd708] rounded-full shadow transform transition duration-300 ease-in-out hover:scale-95">
+                <div class="flex items-center flex-row justify-between">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="rgba(255,255,255,1)">
+                      <path d="M12 22C6.47715 22 2 17.5228 2 12 2 6.47715 6.47715 2 12 2 17.5228 2 22 6.47715 22 12 22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12 20 7.58172 16.4183 4 12 4 7.58172 4 4 7.58172 4 12 4 16.4183 7.58172 20 12 20ZM13 10.5V15H14V17H10V15H11V12.5H10V10.5H13ZM13.5 8C13.5 8.82843 12.8284 9.5 12 9.5 11.1716 9.5 10.5 8.82843 10.5 8 10.5 7.17157 11.1716 6.5 12 6.5 12.8284 6.5 13.5 7.17157 13.5 8Z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="max-w-sm p-2 bg-[#0033ff] border border-[#fdd708] rounded-full shadow transform transition duration-300 ease-in-out hover:scale-95">
+                <div class="flex items-center flex-row justify-between">
+                  <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="rgba(255,255,255,1)">
+                      <path d="M12 22C6.47715 22 2 17.5228 2 12 2 6.47715 6.47715 2 12 2 17.5228 2 22 6.47715 22 12 22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12 20 7.58172 16.4183 4 12 4 7.58172 4 4 7.58172 4 12 4 16.4183 7.58172 20 12 20ZM13 10.5V15H14V17H10V15H11V12.5H10V10.5H13ZM13.5 8C13.5 8.82843 12.8284 9.5 12 9.5 11.1716 9.5 10.5 8.82843 10.5 8 10.5 7.17157 11.1716 6.5 12 6.5 12.8284 6.5 13.5 7.17157 13.5 8Z"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div>
+      {% block content %}
+
+      {% endblock %}
+    </div>
+
+    <footer class="bg-cover" style="background-image: url('{% static 'img/Footer.png' %}');">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="flex items-center"><img src="{% static 'img/PCC.png' %}" class="h-32 drop-shadow-white me-3" alt="FlowBite Logo" /></a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-lg font-semibold text-gray-300 uppercase">Get in touch</h2>
+              <ul class="text-gray-300 font-medium">
+                <li class="mb-4">
+                  <p>
+                    P-2B, Sayre Highway, Panadtalan, <br />Maramag, Bukidnon
+                  </p>
+                </li>
+                <li class="mb-4">
+                  <p>09000000000</p>
+                </li>
+                <li>
+                  <p>pcc@gmail.com</p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-lg font-semibold text-gray-300 uppercase">Quick Links</h2>
+              <ul class="text-gray-300 font-medium">
+                <li class="mb-2">
+                  <a href="" class="hover:underline">About us</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="hover:underline">Academics</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="hover:underline">Application for Admission</a>
+                </li>
+                <li class="mb-3">
+                  <a href="" class="hover:underline">Scholarships and Financial Aids</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-lg font-semibold text-gray-300 uppercase">Portals</h2>
+              <ul class="text-gray-300 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">College</a>
+                </li>
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Basic Education</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">TESDA</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+        <div class="flex items-center justify-center">
+          <span class="text-sm text-gray-400 sm:text-center">© 2025 <a href="" class="hover:underline">Philippine Countryville College Inc</a>. All Rights Reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    {% compress js %}
+    <script src="{% static 'src/js/main.js' %}"></script>
+    {% endcompress %}
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>

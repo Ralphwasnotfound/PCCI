@@ -1131,14 +1131,6 @@ select {
   animation: var(--motion-all-loop-and-enter-animations);
 }
 
-.motion-preset-slide-up {
-  --motion-origin-translate-y: 25%;
-  --motion-origin-opacity: 0;
-  --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
-  --motion-translate-in-animation: motion-translate-in calc(var(--motion-translate-duration) * var(--motion-translate-perceptual-duration-multiplier)) var(--motion-translate-timing) var(--motion-translate-delay) both;
-  animation: var(--motion-all-loop-and-enter-animations);
-}
-
 .motion-preset-slide-up-lg {
   --motion-origin-translate-y: 100%;
   --motion-origin-opacity: 0;
@@ -1285,20 +1277,12 @@ select {
   position: static;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
-}
-
-.sticky {
-  position: sticky;
 }
 
 .inset-0 {
@@ -1343,6 +1327,14 @@ select {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .mx-auto {
@@ -1405,6 +1397,10 @@ select {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.ms-3 {
+  margin-inline-start: 0.75rem;
 }
 
 .block {
@@ -1475,6 +1471,10 @@ select {
   height: 100%;
 }
 
+.h-2\.5 {
+  height: 0.625rem;
+}
+
 .max-h-\[80vh\] {
   max-height: 80vh;
 }
@@ -1513,6 +1513,10 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-2\.5 {
+  width: 0.625rem;
 }
 
 .max-w-4xl {
@@ -1598,6 +1602,18 @@ select {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1706,6 +1722,11 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#4169E1\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(65 105 225 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1778,6 +1799,10 @@ select {
   padding: 1.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1823,9 +1848,19 @@ select {
   padding-bottom: 7rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .py-6 {
@@ -1838,19 +1873,9 @@ select {
   padding-bottom: 1px;
 }
 
-.py-40 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pb-2 {
@@ -1910,10 +1935,6 @@ select {
   line-height: 1.75rem;
 }
 
-.text-\[14px\] {
-  font-size: 14px;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1932,10 +1953,6 @@ select {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-light {
-  font-weight: 300;
 }
 
 .uppercase {
@@ -2009,6 +2026,16 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#0033FF\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 51 255 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ffff01\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 1 / var(--tw-text-opacity, 1));
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -2072,37 +2099,6 @@ select {
   --motion-duration: 2000ms;
 }
 
-.motion-delay-0 {
-  --motion-delay: 0s;
-}
-
-.motion-delay-100 {
-  --motion-delay: 100ms;
-}
-
-.motion-delay-200 {
-  --motion-delay: 200ms;
-}
-
-.motion-delay-2000 {
-  --motion-delay: 2000ms;
-}
-
-.intersect\:motion-preset-slide-up:not([no-intersect]) {
-  --motion-origin-translate-y: 25%;
-  --motion-origin-opacity: 0;
-  --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
-  --motion-translate-in-animation: motion-translate-in calc(var(--motion-translate-duration) * var(--motion-translate-perceptual-duration-multiplier)) var(--motion-translate-timing) var(--motion-translate-delay) both;
-  animation: var(--motion-all-loop-and-enter-animations);
-}
-
-.intersect\:motion-preset-fade:not([no-intersect]) {
-  --motion-origin-opacity: 0;
-  --motion-duration: 500ms;
-  --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
-  animation: var(--motion-all-loop-and-enter-animations);
-}
-
 .hover\:scale-95:hover {
   --tw-scale-x: .95;
   --tw-scale-y: .95;
@@ -2124,6 +2120,11 @@ select {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:text-\[\#0033ff\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 51 255 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-\[\#1E40AF\]:hover {
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity, 1));
@@ -2137,6 +2138,11 @@ select {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-\[\#FFFF01\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 1 / var(--tw-text-opacity, 1));
 }
 
 .hover\:underline:hover {
@@ -2166,6 +2172,10 @@ select {
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .sm\:hidden {
+    display: none;
   }
 
   .sm\:grid-cols-3 {
@@ -2240,6 +2250,10 @@ select {
     justify-content: space-between;
   }
 
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
   .md\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -2257,6 +2271,10 @@ select {
 
   .md\:p-0 {
     padding: 0px;
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
   }
 
   .md\:px-6 {
@@ -2303,12 +2321,40 @@ select {
   .md\:text-\[50px\] {
     font-size: 50px;
   }
+
+  .md\:text-\[20px\] {
+    font-size: 20px;
+  }
+
+  .md\:text-\[10px\] {
+    font-size: 10px;
+  }
+
+  .md\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .md\:text-\[14px\] {
+    font-size: 14px;
+  }
+
+  .md\:text-\[8px\] {
+    font-size: 8px;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:my-8 {
     margin-top: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:py-8 {

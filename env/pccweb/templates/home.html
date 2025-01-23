@@ -24,7 +24,8 @@
         <!-- Button at the bottom -->
         <a href="" class="text-blue-700 bg-[#ffff01] hover:text-white hover:bg-[#0033ff] focus:outline-none rounded-[50px] px-3 py-[1px] md:px-6 md:py-3 text-center font-bold text-[12px] md:text-[16px] transform transition duration-300 ease-in-out hover:scale-95">JOIN US NOW</a>
 
-        <div class="hidden md:flex items-center flex-row justify-between py-6 gap-6">
+        {% comment %}CARD Large SCREEN{% endcomment %}
+        <div class="hidden lg:flex items-center flex-row justify-between py-6 gap-6">
           {% comment %}CARDS{% endcomment %}
           <a href="#News-and-Updates">
             <div class="max-w-sm p-6 bg-[#0033ff] border border-[#fdd708] rounded-lg shadow transform transition duration-300 ease-in-out hover:scale-95">
@@ -69,6 +70,57 @@
                 <div class="pb-2">
                   <p class="text-[16px] px-2 md:text-[30px] font-semibold">PROGRAMS</p>
                   <p class="text-[10px] px-2 md:text-[12px]">View our programs and academic courses.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {% comment %}CARD MIDIUM SCREEN{% endcomment %}
+        <div class="hidden lg:hidden md:flex items-center flex-row justify-between py-2 gap-2">
+          <a href="#News-and-Updates">
+            <div class="max-w-sm p-4 bg-[#0033ff] border border-[#fdd708] rounded-lg shadow transform transition duration-300 ease-in-out hover:scale-95">
+              <div class="flex items-center flex-row justify-between">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="64" fill="rgba(255,255,255,1)">
+                    <path d="M12 22C6.47715 22 2 17.5228 2 12 2 6.47715 6.47715 2 12 2 17.5228 2 22 6.47715 22 12 22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12 20 7.58172 16.4183 4 12 4 7.58172 4 4 7.58172 4 12 4 16.4183 7.58172 20 12 20ZM13 10.5V15H14V17H10V15H11V12.5H10V10.5H13ZM13.5 8C13.5 8.82843 12.8284 9.5 12 9.5 11.1716 9.5 10.5 8.82843 10.5 8 10.5 7.17157 11.1716 6.5 12 6.5 12.8284 6.5 13.5 7.17157 13.5 8Z"></path>
+                  </svg>
+                </div>
+                <div class="pb-2">
+                  <p class="px-1 md:text-[20px] font-semibold">INFO</p>
+                  <p class="px-1 md:text-[8px]">Learn about us, updates, programs and many more.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="">
+            <div class="max-w-sm p-4 bg-[#0033ff] border border-[#fdd708] rounded-lg shadow transform transition duration-300 ease-in-out hover:scale-95">
+              <div class="flex items-center flex-row justify-between">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="64" fill="rgba(255,255,255,1)">
+                    <path d="M12 0.585693L18 6.58569V9H22V19H23V21H1V19H2V9H6V6.58569L12 0.585693ZM18 19H20V11H18V19ZM6 11H4V19H6V11ZM8 7.41412V18.9999H11V12H13V18.9999H16V7.41412L12 3.41412L8 7.41412Z"></path>
+                  </svg>
+                </div>
+                <div class="pb-2">
+                  <p class="px-1 md:text-[20px] font-semibold">JOIN US</p>
+                  <p class="px-1 md:text-[8px]">Join us to a globally competitive education.</p>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#Programs">
+            <div class="max-w-sm p-4 bg-[#0033ff] border border-[#fdd708] rounded-lg shadow transform transition duration-300 ease-in-out hover:scale-95">
+              <div class="flex items-center flex-row justify-between">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="64" fill="rgba(255,255,255,1)">
+                    <path d="M4 11.3333L0 9L12 2L24 9V17.5H22V10.1667L20 11.3333V18.0113L19.7774 18.2864C17.9457 20.5499 15.1418 22 12 22C8.85817 22 6.05429 20.5499 4.22263 18.2864L4 18.0113V11.3333ZM6 12.5V17.2917C7.46721 18.954 9.61112 20 12 20C14.3889 20 16.5328 18.954 18 17.2917V12.5L12 16L6 12.5ZM3.96927 9L12 13.6846L20.0307 9L12 4.31541L3.96927 9Z"></path>
+                  </svg>
+                </div>
+                <div class="pb-2">
+                  <p class="md:text-[18px] px-1 font-semibold">PROGRAMS</p>
+                  <p class="md:text-[8px] px-1">View our programs and academic courses.</p>
                 </div>
               </div>
             </div>

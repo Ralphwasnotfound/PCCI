@@ -140,6 +140,7 @@
               </a>
             </li>
 
+            {% comment %}ACADEMICS{% endcomment %}
             <li class="pt-1 md:pt-0 z-50">
               <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white md:bg-[#0033ff] font-medium text-sm text-center inline-flex items-center" type="button">
                 ACADEMICS<svg class="w-2 h-2 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -218,7 +219,7 @@
               </div>
             </li>
 
-            {% comment %}Student HUB{% endcomment %}
+            {% comment %}STUDENT HUB{% endcomment %}
 
             <li class="pt-1 md:pt-0 z-40">
               <button id="dropdownDelayButton1" data-dropdown-toggle="dropdownDelay1" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white md:bg-[#0033ff] font-medium text-sm text-center inline-flex items-center" type="button">
@@ -304,6 +305,7 @@
               </div>
             </li>
 
+            {% comment %}ABOUT{% endcomment %}
             <li class="pt-1 md:pt-0 z-30">
               <button id="dropdownDelayButton2" data-dropdown-toggle="dropdownDelay2" data-dropdown-delay="500" data-dropdown-trigger="hover" class="text-white md:bg-[#0033ff] font-medium text-sm text-center inline-flex items-center" type="button">
                 ABOUT<svg class="w-2 h-2 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -313,7 +315,7 @@
               <div id="dropdownDelay2" class="z-10 hidden bg-[#1E40AF] rounded-lg shadow w-44">
                 <ul class="py-2 text-sm text-[#ffffff]" aria-labelledby="dropdownDelayButton">
                   <li>
-                    <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">PCC</a>
+                    <a href="{% url 'PCC' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">PCC</a>
                   </li>
                   <li>
                     <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Contact</a>

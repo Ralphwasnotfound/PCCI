@@ -6,5 +6,8 @@ def home(request):
     return render(request, 'home.html')
 
 # ABOUT PAGES
-def pcc(request):
-    return render(request, 'about/pcc.html')
+def about(request):
+    return render(request, 'about/about.html')
+
+def contact(request):
+    return render(request, 'about/contact.html')

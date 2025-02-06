@@ -464,46 +464,6 @@
     <script src="{% static 'src/js/main.js' %}"></script>
     {% endcompress %}
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Hide all items on page load
-        document.querySelectorAll('.item').forEach((item) => {
-          item.style.display = 'none'
-        })
-      })
-      
-      function filterItems(category) {
-        const items = document.querySelectorAll('.item')
-        const buttons = document.querySelectorAll('.category-btn')
-      
-        // Reset all buttons to default (Blue background, White text)
-        buttons.forEach((button) => {
-          button.classList.remove('bg-[#FFC107]', 'text-[#1E40AF]') // Remove active styles
-          button.classList.add('bg-[#1E40AF]', 'text-white') // Set default styles
-        })
-      
-        // Find the clicked button and apply active styles
-        buttons.forEach((button) => {
-          if (button.getAttribute('onclick').includes(category)) {
-            button.classList.add('bg-[#FFC107]', 'text-[#FFC107]') // Active (Yellow BG, Blue text)
-            button.classList.remove('bg-[#1E40AF]', 'text-white') // Remove default
-          }
-        })
-      
-        // Hide all items first
-        items.forEach((item) => {
-          item.style.display = 'none'
-        })
-      
-        // Show only the selected category
-        items.forEach((item) => {
-          if (item.dataset.category === category) {
-            item.style.display = 'block'
-          }
-        })
-      }
-    </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
   </body>
 </html>

@@ -133,7 +133,7 @@
 
     <nav class="bg-[#0033ff]">
       {% comment %}desktop icon{% endcomment %}
-      <a href="{% url 'home' %}" class="hidden md:block absolute left-[200px] top-1 items-center space-x-3 rtl:space-x-reverse z-50"><img src="{% static 'img/PCC.png' %}" class="h-28 drop-shadow-white" alt="PCC" /></a>
+      <a href="{% url 'home' %}" class="motion-preset-expand motion-duration-2000 hidden md:block absolute left-[200px] top-1 items-center space-x-3 rtl:space-x-reverse z-50"><img src="{% static 'img/PCC.png' %}" class="h-28 drop-shadow-white" alt="PCC" /></a>
       {% comment %}smallscreen icon{% endcomment %}
       <a href="{% url 'home' %}" class="block md:hidden absolute left-[20px] items-center space-x-3 rtl:space-x-reverse z-50"><img src="{% static 'img/PCCI.png' %}" class="h-20 drop-shadow-white" alt="PCC" /></a>
       <div class="max-w-screen-xl flex flex-wrap items-center justify-end mx-auto p-4">

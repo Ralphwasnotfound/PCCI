@@ -48,8 +48,8 @@ urlpatterns = [
 
     # ACADEMICS/Basic Education
 
-    path('academics/basicedu/junior-high-school', views.BSCRIM, name='JRHIGH'),
+    path('academics/basicedu/junior-high-school', views.JRHIGH, name='JRHIGH'),
 
-    path('academics/basicedu/senior-high-school', views.BSCRIM, name='SRHIGH'),
+    path('academics/basicedu/senior-high-school', views.SRHIGH, name='SRHIGH'),
 
 ]

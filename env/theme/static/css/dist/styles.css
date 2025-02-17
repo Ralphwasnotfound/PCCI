@@ -1157,6 +1157,13 @@ select {
   animation: var(--motion-all-loop-and-enter-animations);
 }
 
+.motion-preset-fade {
+  --motion-origin-opacity: 0;
+  --motion-duration: 500ms;
+  --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
+  animation: var(--motion-all-loop-and-enter-animations);
+}
+
 .motion-preset-bounce {
   --motion-duration: 300ms;
   --motion-translate-timing: var(--motion-bounce);
@@ -1171,6 +1178,15 @@ select {
 .motion-preset-expand {
   --motion-origin-scale-x: 50%;
   --motion-origin-scale-y: 50%;
+  --motion-origin-opacity: 0;
+  --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
+  --motion-scale-in-animation: motion-scale-in calc(var(--motion-scale-duration) * var(--motion-scale-perceptual-duration-multiplier)) var(--motion-scale-timing) var(--motion-scale-delay) both;
+  animation: var(--motion-all-loop-and-enter-animations);
+}
+
+.motion-preset-shrink {
+  --motion-origin-scale-x: 150%;
+  --motion-origin-scale-y: 150%;
   --motion-origin-opacity: 0;
   --motion-opacity-in-animation: motion-opacity-in calc(var(--motion-opacity-duration) * var(--motion-opacity-perceptual-duration-multiplier)) var(--motion-opacity-timing) var(--motion-opacity-delay) both;
   --motion-scale-in-animation: motion-scale-in calc(var(--motion-scale-duration) * var(--motion-scale-perceptual-duration-multiplier)) var(--motion-scale-timing) var(--motion-scale-delay) both;
@@ -1581,6 +1597,22 @@ select {
   height: 100%;
 }
 
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[30\%\] {
+  height: 30%;
+}
+
+.h-\[20\%\] {
+  height: 20%;
+}
+
+.h-\[65vh\] {
+  height: 65vh;
+}
+
 .max-h-\[80vh\] {
   max-height: 80vh;
 }
@@ -1683,6 +1715,38 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[20\%\] {
+  width: 20%;
+}
+
+.w-\[25\%\] {
+  width: 25%;
+}
+
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[60\%\] {
+  width: 60%;
 }
 
 .max-w-4xl {
@@ -1839,6 +1903,14 @@ select {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-40 {
+  gap: 10rem;
+}
+
+.gap-y-16 {
+  row-gap: 4rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2376,6 +2448,22 @@ select {
   line-height: 1.75rem;
 }
 
+.text-\[40px\] {
+  font-size: 40px;
+}
+
+.text-\[70px\] {
+  font-size: 70px;
+}
+
+.text-\[60px\] {
+  font-size: 60px;
+}
+
+.text-\[8vw\] {
+  font-size: 8vw;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2496,6 +2584,31 @@ select {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.text-\[\#0F172A\] {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#3B82F6\] {
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#FDE68A\] {
+  --tw-text-opacity: 1;
+  color: rgb(253 230 138 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -2520,6 +2633,21 @@ select {
 
 .drop-shadow-white {
   --tw-drop-shadow: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-lg {
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-2xl {
+  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -2999,6 +3127,10 @@ select {
     width: 100%;
   }
 
+  .md\:w-\[200px\] {
+    width: 200px;
+  }
+
   .md\:max-w-\[1000px\] {
     max-width: 1000px;
   }
@@ -3172,6 +3304,10 @@ select {
   .md\:text-\[8px\] {
     font-size: 8px;
   }
+
+  .md\:text-\[5vw\] {
+    font-size: 5vw;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -3250,6 +3386,10 @@ select {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[250px\] {
+    width: 250px;
   }
 
   .lg\:max-w-\[1000px\] {
@@ -3386,6 +3526,10 @@ select {
   .lg\:text-\[64px\] {
     font-size: 64px;
   }
+
+  .lg\:text-\[60px\] {
+    font-size: 60px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -3443,6 +3587,10 @@ select {
 
   .xl\:w-\[80\%\] {
     width: 80%;
+  }
+
+  .xl\:w-\[50\%\] {
+    width: 50%;
   }
 
   .xl\:grid-cols-2 {

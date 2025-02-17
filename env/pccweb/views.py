@@ -45,7 +45,6 @@ def gallery(request):
 
 def admission(request):
     return render(request, 'navtab/admission.html')
- 
 
 #  Navtabs/Admission
 
@@ -54,3 +53,26 @@ def basicEducation(request):
 
 def college(request):
     return render(request, 'navtab/admission/college.html')
+
+# ACADEMICS/COLLEGE
+
+def BSIT(request):
+    return render(request, 'academics/college/BSIT.html')
+
+def ACT(request):
+    return render(request, 'academics/college/ACT.html')
+
+def BSBA(request):
+    return render(request, 'academics/college/BSBA.html')
+
+def BSCRIM(request):
+    return render(request, 'academics/college/BSCRIM.html')
+
+# ACADEMICS/Basic education
+
+def JRHIGH(request):
+    return render(request, 'academics/basicedu/jrhigh.html')
+
+def SRHIGH(request):
+    return render(request, 'academics/basicedu/jrhigh.html')
+

@@ -36,6 +36,20 @@ urlpatterns = [
 
     path('admission/college', views.college, name='college'),
 
+    # ACADEMICS/COLLEGE
 
+    path('academics/college/computer-studies', views.BSIT, name='BSIT'),
+
+    path('academics/college/associate-in-computer', views.ACT, name='ACT'),
+
+    path('academics/college/business-administration', views.BSBA, name='BSBA'),
+
+    path('academics/college/criminology', views.BSCRIM, name='BSCRIM'),
+
+    # ACADEMICS/Basic Education
+
+    path('academics/basicedu/junior-high-school', views.BSCRIM, name='JRHIGH'),
+
+    path('academics/basicedu/senior-high-school', views.BSCRIM, name='SRHIGH'),
 
 ]

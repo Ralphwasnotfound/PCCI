@@ -76,3 +76,18 @@ def JRHIGH(request):
 def SRHIGH(request):
     return render(request, 'academics/basicedu/jrhigh.html')
 
+# ACADEMIC PAGE
+
+def ACADS(request):
+    return render(request, 'academics/academics.html')
+
+# PROGRAMS
+
+def collegeprog(request):
+    return render(request, 'programs/college/college-prog.html')
+
+def basiceduprog(request):
+    return render(request, 'programs/basicedu/basicedu-prog.html')
+
+def tesdaprog(request):
+    return render(request, 'programs/tesda/tesda-prog.html')

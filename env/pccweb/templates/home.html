@@ -274,40 +274,41 @@
         </p>
       </div>
     </div>
-
+    {% comment %}CARDS{% endcomment %}
+    {% comment %}COLLEGE{% endcomment %}
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-10 px-5 sm:px-10 gap-5 sm:gap-10">
       <div class="motion-preset-slide-up-lg motion-duration-2000 max-w-sm bg-[#0033ff] border border-[#ffff01] rounded-lg shadow transform transition duration-300 ease-in-out hover:scale-95 w-full">
         <img class="rounded-t-lg h-[200px] w-full object-cover" src="{% static 'img/PCC_BUILDING-0.2.jpg' %}" alt="" />
         <div class="p-5">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-300">College Programs</h5>
           <p class="mb-3 font-normal text-gray-200">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-          <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-[#ffff01] hover:text-blue-700">
+          <a href="{% url 'college-prog' %}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-[#ffff01] hover:text-blue-700">
             Discover more<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
             </svg>
           </a>
         </div>
       </div>
-
+      {% comment %}BASIC EDUCATION{% endcomment %}
       <div class="motion-preset-slide-up-lg motion-duration-1500 max-w-sm bg-[#0033ff] border border-[#ffff01] rounded-lg shadow transform transition duration-300 ease-in-out hover:scale-95 w-full">
         <img class="rounded-t-lg h-[200px] w-full object-cover" src="{% static 'img/PCC_BUILDING-0.2.jpg' %}" alt="" />
         <div class="p-5">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-300">Basic Education</h5>
           <p class="mb-3 font-normal text-gray-200">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-          <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-[#ffff01] hover:text-blue-700">
+          <a href="{% url 'basic-prog' %}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-[#ffff01] hover:text-blue-700">
             Discover more<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
             </svg>
           </a>
         </div>
       </div>
-
+      {% comment %}TESDA{% endcomment %}
       <div class="motion-preset-slide-up-lg motion-duration-1000 max-w-sm bg-[#0033ff] border border-[#ffff01] rounded-lg shadow transform transition duration-300 ease-in-out hover:scale-95 w-full">
         <img class="rounded-t-lg h-[200px] w-full object-cover" src="{% static 'img/PCC_BUILDING-0.2.jpg' %}" alt="" />
         <div class="p-5">
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-300">TESDA Programs</h5>
           <p class="mb-3 font-normal text-gray-200">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-          <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-[#ffff01] hover:text-blue-700">
+          <a href="{% url 'tesda-prog' %}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-[#ffff01] hover:text-blue-700">
             Discover more<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
             </svg>

@@ -52,4 +52,15 @@ urlpatterns = [
 
     path('academics/basicedu/senior-high-school', views.SRHIGH, name='SRHIGH'),
 
+    # ACADEMIC PAGE
+    path('academics/', views.ACADS, name='academics'),
+
+    # Programs
+
+    path('programs/college/', views.collegeprog, name='college-prog'),
+
+    path('programs/basic-education/', views.basiceduprog, name='basic-prog'),
+
+    path('programs/tesda/', views.tesdaprog, name='tesda-prog'),
+
 ]

@@ -74,7 +74,7 @@ def JRHIGH(request):
     return render(request, 'academics/basicedu/jrhigh.html')
 
 def SRHIGH(request):
-    return render(request, 'academics/basicedu/jrhigh.html')
+    return render(request, 'academics/basicedu/srhigh.html')
 
 # ACADEMIC PAGE
 
@@ -91,3 +91,41 @@ def basiceduprog(request):
 
 def tesdaprog(request):
     return render(request, 'programs/tesda/tesda-prog.html')
+
+# PORTALS
+def portal(request):
+    return render(request, 'portals/portal.html')
+
+def collegeportal(request):
+    return render(request, 'portals/college/collegeportal.html')
+
+def basiceduportal(request):
+    return render(request, 'portals/basiceducation/basiceduportal.html')
+
+# RESOURCES
+
+def SMS(request):
+    return render(request, 'student-hub/student-resources/SMS.html')
+
+def AC(request):
+    return render(request, 'student-hub/student-resources/academic-calendar.html')
+
+# STUDENT AFFAIRS
+
+def TSF(request):
+    return render(request, 'student-hub/student-affairs/TSF.html')
+
+def studentorg(request):
+    return render(request, 'student-hub/student-affairs/studentorg.html')
+
+def decipline(request):
+    return render(request, 'student-hub/student-affairs/studentdecipline.html')
+
+# SERVICES
+
+def library(request):
+    return render(request, 'student-hub/student-services/library.html')
+
+def registrar(request):
+    return render(request, 'student-hub/student-services/registrar.html')
+

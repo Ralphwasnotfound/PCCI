@@ -119,7 +119,7 @@
             </a>
           </li>
           <li class="flex items-center space-x-2">
-            <a href="" class="flex items-center space-x-2">
+            <a href="{% url 'portal' %}" class="flex items-center space-x-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="rgba(255,255,255,1)">
                 <path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13Z"></path>
               </svg>
@@ -255,16 +255,10 @@
                     <div id="doubleDropdown" class="z-10 hidden bg-[#1E40AF] rounded-lg shadow w-44">
                       <ul class="py-2 text-sm text-[#ffffff]" aria-labelledby="doubleDropdownButton">
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
+                          <a href="{% url 'SMS' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Student Management System</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
+                          <a href="{% url 'AC' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Academic Calendar</a>
                         </li>
                       </ul>
                     </div>
@@ -272,23 +266,20 @@
                   {% comment %}Double drop down list 2{% endcomment %}
                   <li>
                     <button id="doubleDropdownButton1" data-dropdown-toggle="doubleDropdown1" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:text-[#0033ff] hover:bg-[#ffff01]">
-                      Resources<svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      Student Affairs<svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                       </svg>
                     </button>
                     <div id="doubleDropdown1" class="z-10 hidden bg-[#1E40AF] rounded-lg shadow w-44">
                       <ul class="py-2 text-sm text-[#ffffff]" aria-labelledby="doubleDropdownButton">
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
+                          <a href="{% url 'TSF' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Tuition Fee, Scholarships and Financial Aids</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
+                          <a href="{% url 'student-org' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Student Organizations</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
+                          <a href="{% url 'decipline' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Student Discipline</a>
                         </li>
                       </ul>
                     </div>
@@ -296,23 +287,17 @@
                   {% comment %}Double Dropdown List 3{% endcomment %}
                   <li>
                     <button id="doubleDropdownButton2" data-dropdown-toggle="doubleDropdown2" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:text-[#0033ff] hover:bg-[#ffff01]">
-                      Resources<svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                      Services<svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
                       </svg>
                     </button>
                     <div id="doubleDropdown2" class="z-10 hidden bg-[#1E40AF] rounded-lg shadow w-44">
                       <ul class="py-2 text-sm text-[#ffffff]" aria-labelledby="doubleDropdownButton">
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
+                          <a href="{% url 'library' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Library</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
-                        </li>
-                        <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Overview</a>
+                          <a href="{% url 'registrar' %}" class="block px-4 py-2 hover:bg-[#ffff01] hover:text-[#0033ff]">Registrar</a>
                         </li>
                       </ul>
                     </div>

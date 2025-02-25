@@ -63,4 +63,33 @@ urlpatterns = [
 
     path('programs/tesda/', views.tesdaprog, name='tesda-prog'),
 
+    # Portals
+
+    path('portals/', views.portal, name='portal'),
+
+    path('portal/college/', views.collegeportal, name='collegeportal'),
+
+    path('portal/basic-education/', views.basiceduportal, name='basiceduportal'),
+
+    # RESOURCES
+
+    path('student-hub/resources/student-management-system/', views.SMS, name='SMS'),
+    
+    path('student-hub/resources/academic-calendar/', views.AC, name='AC'),
+
+
+    # STUDENT AFFAIRS
+
+    path('student-hub/student-affairs/tuition-fee,scholarships-and-financial-aids/', views.TSF, name='TSF'),
+
+    path('student-hub/student-affairs/student-org/', views.studentorg, name='student-org'),
+
+    path('student-hub/student-affairs/student-decipline/', views.decipline, name='decipline'),
+
+    # SERVICES
+
+    path('student-hub/student-services/library/', views.library, name='library'),
+
+    path('student-hub/student-services/rigistrar/', views.registrar, name='registrar'),
+
 ]
